@@ -1,17 +1,17 @@
-using InvoiceApi.Mappings; // Asegúrate de tener este namespace si usas AutoMapper
+using InvoiceApi.Mappings; 
 using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers(); // Permite usar controladores como InvoicesController
-builder.Services.AddAutoMapper(typeof(MappingProfile)); // Si usas AutoMapper
+builder.Services.AddControllers(); 
+builder.Services.AddAutoMapper(typeof(MappingProfile)); 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,10 +22,10 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-// ?? Mapear controladores REST
+
 app.MapControllers();
 
-// ?? Endpoint de ejemplo: WeatherForecast
+
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
