@@ -1,0 +1,14 @@
+{
+  "invoiceId": 1,
+  "customerId": 100,
+  "date": "2024-06-01",
+  "total": 150.75
+}
+
+{
+  "invoiceId": 2,
+  "customerId": 100,
+  "date": "2024-06-01",
+  "total": 0
+}
+
